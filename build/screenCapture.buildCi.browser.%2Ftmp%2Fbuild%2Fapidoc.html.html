@@ -1,0 +1,673 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/conis/chinese-lunar#readme">chinese-lunar (v0.1.1)</a>
+</h1>
+<h4>å†œåŽ†ä¸Žå…¬åŽ†ç›¸äº’è½¬æ¢çš„ç±»åº“ï¼Œæ”¯æŒå†œåŽ†çš„ä¹‹é—´çš„åŠ&nbsp;å‡è¿ç®—ï¼Œå¹¶æä¾›ç”Ÿè‚–ã€å¹²æ”¯ç­‰ï¼Œæ”¯æŒ1900-2100å¹´</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.chinese-lunar">module chinese-lunar</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.animalName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>animalName
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.dateAdd">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>dateAdd
+            <span class="apidocSignatureSpan">(lunar, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.dateDiff">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>dateDiff
+            <span class="apidocSignatureSpan">(lunar1, lunar2, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.dayName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>dayName
+            <span class="apidocSignatureSpan">(lunar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.daysOfMonth">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>daysOfMonth
+            <span class="apidocSignatureSpan">(year, month, leap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.format">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>format
+            <span class="apidocSignatureSpan">(lunar, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.leapMonthOfYear">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>leapMonthOfYear
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.lunarToSolar">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>lunarToSolar
+            <span class="apidocSignatureSpan">(year, month, day, leap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthAdd">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthAdd
+            <span class="apidocSignatureSpan">(lunar, inc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthDiff">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthDiff
+            <span class="apidocSignatureSpan">(lunar1, lunar2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthName
+            <span class="apidocSignatureSpan">(month, traditional, leap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthsOfYear">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthsOfYear
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.solarToLunar">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>solarToLunar
+            <span class="apidocSignatureSpan">(solar, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.traditionalYearName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>traditionalYearName
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.yearName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>yearName
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.chinese-lunar" id="apidoc.module.chinese-lunar">module chinese-lunar</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.animalName" id="apidoc.element.chinese-lunar.animalName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>animalName
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">animalName = function (year) {
+		return "é¼&nbsp;ç‰›è™Žå…”é¾™è›‡é©¬ç¾ŠçŒ´é¸¡ç‹—çŒª".split("")[(year - 4) % 12];
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.dateAdd" id="apidoc.element.chinese-lunar.dateAdd">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>dateAdd
+        <span class="apidocSignatureSpan">(lunar, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dateAdd = function (lunar, expr) {
+		//åˆ†æžè¡¨è¾¾å¼
+		var list = _expression(expr);
+
+		for(var i = 0; i &lt; list.length; i ++){
+			lunar = _dateAdd(lunar, list[i]);
+		};
+		return lunar;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.dateDiff" id="apidoc.element.chinese-lunar.dateDiff">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>dateDiff
+        <span class="apidocSignatureSpan">(lunar1, lunar2, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dateDiff = function (lunar1, lunar2, expr) {
+		//è®¡ç®—å†œåŽ†æœˆä»½å·®å€¼
+		if(expr == "M"){
+			return _chineseLunar.monthDiff(lunar1, lunar2);
+		};
+
+		//å…ˆè½¬æˆå…¬åŽ†ï¼Œé™¤äº†æœˆä»½ï¼Œå…¶å®ƒçš„éƒ½å¯ä»¥æŒ‰å…¬åŽ†è®¡ç®—
+		var solar1 = _chineseLunar.lunarToSolar(lunar1);
+		var solar2 = _chineseLunar.lunarToSolar(lunar2);
+		//å†æŠŠå†œåŽ†è½¬åˆ°å…¬åŽ†
+		return _solarDiff(solar2, solar1, expr);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.dayName" id="apidoc.element.chinese-lunar.dayName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>dayName
+        <span class="apidocSignatureSpan">(lunar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dayName = function (lunar) {
+		switch (lunar) {
+			case 10: return 'åˆå';
+			case 20: return 'äºŒå';
+			case 30: return 'ä¸‰å';
+			default: return ("åˆåå»¿å…".split("")[Math.floor(lunar / 10)] +
+				"ä¸€äºŒä¸‰å››äº”å…­ä¸ƒå…«ä¹å".split("")[(lunar - 1) % 10]) || lunar;
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.daysOfMonth" id="apidoc.element.chinese-lunar.daysOfMonth">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>daysOfMonth
+        <span class="apidocSignatureSpan">(year, month, leap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">daysOfMonth = function (year, month, leap) {
+		if (typeof (year) == "object") {
+			month = year.month;
+			leap = year.leap;
+			year = year.year;
+		};
+
+		var date1 = _chineseLunar.lunarToSolar(year, month, 1, leap);
+		var leapMonth = _chineseLunar.leapMonthOfYear(year);
+		if (leapMonth == month &amp;&amp; !leap) {
+			//å¦‚æžœæ˜¯é—°æœˆå’Œå½“å‰ä¸€æœˆä¸€è‡³ï¼Œä¸”å½“å‰æœˆä¸æ˜¯é—°æœˆï¼Œè¯´æ˜Žä¸‹ä¸€ä¸ªæœˆæ˜¯é—°æœˆï¼Œä¾‹å¦‚2009å¹´5æœˆï¼Œè¿™ä¸€å¹´é—°5æœˆï¼Œå¦‚æžœä¼&nbsp;è¿‡æ¥çš„ä¸æ˜¯é—°æœˆï¼Œé‚£ä¹ˆä¸‹ä¸€ä¸ªæœˆå°±æ˜¯é—°æœˆ
+			leap = true;
+		} else if (month == 12) {
+			//å†œåŽ†çš„æœ€åŽä¸€ä¸ªæœˆ
+			year++;
+			month = 1;
+		} else {
+			leap = false;
+			month++;
+		};
+
+		var date2 = _chineseLunar.lunarToSolar(year, month, 1, leap);
+		return _dateDiff(date2, date1, "d");
+
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.format" id="apidoc.element.chinese-lunar.format">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>format
+        <span class="apidocSignatureSpan">(lunar, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (lunar, expr) {
+		return expr.replace(/[TAYyMmdD]/g, function(m, i) {
+			switch (m) {
+				//èŽ·å–ä¼&nbsp;ç»Ÿçš„å¹´
+				case "T": return _chineseLunar.traditionalYearName(lunar.year);
+				//èŽ·å–ç”Ÿè‚–
+				case "A": return _chineseLunar.animalName(lunar.year);
+				//èŽ·å–ä¸­æ–‡çš„å¹´
+				case "Y": return _chineseLunar.yearName(lunar.year);
+				//èŽ·å–æ•°å­—å¹´
+				case "y": return lunar.year;
+				//èŽ·å–æœˆä»½
+				case "m": return _chineseLunar.monthName(lunar.month, false, lunar.leap);
+				//èŽ·å–ä¼&nbsp;ç»Ÿçš„æœˆ
+				case "M": return _chineseLunar.monthName(lunar.month, true, lunar.leap);
+				//èŽ·å–å¤©
+				case "d": return _chineseLunar.dayName(lunar.day);
+				//å¦‚æžœæ˜¯åˆä¸€ï¼Œåˆ™æ˜¾ç¤ºæœˆï¼Œè€Œä¸æ˜¯æ˜¾ç¤º
+				case "D":
+					if(lunar.day == 1){
+						return _chineseLunar.monthName(lunar.month, false, lunar.leap);
+					}else{
+						return _chineseLunar.dayName(lunar.day);
+					};
+			}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### solarToLunar
+
+`solarToLunar(solar[,format]); //=&gt; lunar or string`
+å°†å…¬åŽ†è½¬æ¢ä¸ºå†œåŽ†ï¼Œå¦‚æžœè®¾ç½®äº†formatï¼Œåˆ™è¿”å›žå­—ç¬¦å½¢å¼ï¼Œåä¹‹è¿”å›žå†œåŽ†å¯¹è±¡ã€‚
+ç¤ºä¾‹ä»£ç&nbsp;å¦‚ä¸‹ï¼š
+
+    var lunar = chineseLunar.solarToLunar(new Date(1982, 0, 29));
+    console.log(lunar.<span class="apidocCodeKeywordSpan">format</span>('YMD'));     //ä¸€ä¹å…«äºŒå¹´è…Šæœˆåå…­
+
+### lunarToSolar
+
+`lunarToSolar(lunar); // =&gt; solar`
+`lunarToSolar(year, month, day[,leap]); //=&gt; solar`
+å°†å†œåŽ†è½¬æ¢ä¸ºå…¬åŽ†ï¼Œleapä¸ºå¯é€‰å‚æ•°
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.leapMonthOfYear" id="apidoc.element.chinese-lunar.leapMonthOfYear">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>leapMonthOfYear
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">leapMonthOfYear = function (year) {
+		var info = MAPPING[year - MINYEAR];
+		return info ? info[0] : 0;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.lunarToSolar" id="apidoc.element.chinese-lunar.lunarToSolar">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>lunarToSolar
+        <span class="apidocSignatureSpan">(year, month, day, leap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lunarToSolar = function (year, month, day, leap) {
+		var arg0 = arguments[0];
+
+		//ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯å¯¹è±¡
+		if (typeof (arg0) == "object" &amp;&amp; arguments.length == 1) {
+			year = arg0.year;
+			month = arg0.month;
+			day = arg0.day;
+			leap = arg0.leap;
+		};
+
+		//æ&nbsp;¹æ®åç§»é‡å–å¾—æ˜&nbsp;å°„æ•°æ®
+		var offset = year - MINYEAR;
+		//æ‰€æŸ¥è¯¢çš„æ—¥æœŸè¶…å‡ºèŒƒå›´
+		if (offset &lt; 0 || offset &gt; MAPPING.length){
+			throw new Error('Specified date range is invalid.');
+		};
+
+		//å–å¾—æ¶¦æœˆæ˜¯å“ªä¸€ä¸ªæœˆ
+		var leapMonth = MAPPING[offset][0];
+		//å¦‚æžœisLeap=trueï¼Œå¹¶ä¸”å½“å‰æœˆä»½å°±æ˜¯é—°æœˆï¼Œæˆ–è€…æœ¬æœˆæœ‰é—°æœˆï¼Œä¸”å½“å‰æœˆä»½å¤§äºŽé—°æœˆï¼Œåˆ™æœˆä»½éœ€è¦åŠ&nbsp;1
+		if ((leap &amp;&amp; month == leapMonth) ||
+			(leapMonth &gt; 0 &amp;&amp; month &gt; leapMonth)){
+			month += 1;
+		};
+
+		//å–å‡ºå¯¹åº”åˆ°æŸä¸ªæœˆçš„ç‰‡æ–­
+		var segment = MAPPING[offset][month]; 		//å†œåŽ†ç¬¬ä¸€å¤©å¯¹åº”å…¬åŽ†çš„å…·ä½“å¤©
+		var mapMonth = Number(segment.substring(0, 2))
+		var mapDate = Number(segment.substring(2, 4));
+
+		if (mapMonth &gt; 12) {
+			year += 1;
+			mapMonth -= 12;
+		};
+
+		var solar = new Date(year, mapMonth - 1, mapDate);
+		var time = solar.getTime() + ((day - 1) * 24 * 60 * 60 * 1000);
+		return new Date(time);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthAdd" id="apidoc.element.chinese-lunar.monthAdd">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthAdd
+        <span class="apidocSignatureSpan">(lunar, inc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthAdd = function (lunar, inc) {
+		//å¦‚æžœæ˜¯Dateï¼Œåˆ™è½¬æ¢ä¸ºå†œåŽ†
+		if (lunar instanceof Date) lunar = _chineseLunar.solarToLunar(lunar);
+		if (inc == 0) return lunar;
+
+		var year = lunar.year, count;
+		var month = lunar.month;
+		if(lunar.leap ||
+			(lunar.leapMonth &gt; 0 &amp;&amp; lunar.month &gt; lunar.leapMonth)) month++;
+
+		var run = true;
+		do {
+			//è®¡ç®—å½“å‰å¹´æœ‰å¤šå°‘ä¸ªæœˆ
+			count = _chineseLunar.monthsOfYear(year);
+			inc = inc + month - count;
+			if (inc &lt;= 0) {
+				run = false;
+				month = year == lunar.year ? count + inc : count + inc - month;
+			}else {
+				year++;
+				month = 1;
+			}
+		} while (run);
+
+		//èŽ·å–æœ€åŽçš„ç»“æžœå¹´çš„é—°æœˆæ˜¯å“ªä¸€ä¸ªæœˆ
+		var leapMonth = _chineseLunar.leapMonthOfYear(year);
+		var leap = false;
+		//å¦‚æžœé—°æœˆå¤§äºŽå†œåŽ†æœˆï¼Œåˆ™æœˆä»½å‡1
+		if (leapMonth &gt; 0 &amp;&amp; month &gt; leapMonth) {
+			month--;
+			//å¦‚æžœå‡å®ŒåŽæœˆä»½å’Œé—°æœˆç›¸ç­‰ï¼Œè¡¨ç¤ºæ˜¯é—°æœˆ
+			leap = month == leapMonth;
+		}
+
+		return {
+			year: year,
+			month: month,
+			leap: leap,
+			leapMonth: leapMonth
+		};
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthDiff" id="apidoc.element.chinese-lunar.monthDiff">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthDiff
+        <span class="apidocSignatureSpan">(lunar1, lunar2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthDiff = function (lunar1, lunar2) {
+		//å¦‚æžœæ˜¯å…¬åŽ†çš„æ—¥æœŸæ&nbsp;¼å¼ï¼Œåˆ™è½¬æ¢ä¸ºå†œåŽ†
+		var count = 0;
+
+		//å¦‚æžœæ•°æ®ç±»åž‹æ˜¯æ—¥æœŸï¼Œåˆ™è½¬æ¢ä¸ºå†œåŽ†
+		if (lunar1 instanceof Date) lunar1 = _chineseLunar.solarToLunar(lunar1);
+		if (lunar2 instanceof Date) lunar2 = _chineseLunar.solarToLunar(lunar2);
+
+		//ä¸¤ä¸ªæ—¥æœŸæ˜¯åŒä¸€å¹´
+		if (lunar1.year == lunar2.year) {
+			count = lunar2.month - lunar1.month;
+			//ä¸­é—´æœ‰é—°æœˆçš„å­˜åœ¨ï¼Œè®¡æ•°å™¨åŠ&nbsp;ä¸€
+			if (lunar1.leapMonth &gt;= lunar1.month &amp;&amp; lunar1.leapMonth &lt;= lunar2.month) count++;
+		} else {
+			//è®¡ç®—é¦–å¹´ï¼Œå¦‚æžœå½“å‰çš„é—°æœˆå¤§äºŽå½“å‰æœˆï¼Œæˆ–è€…å½“å‰å¹´æœ‰é—°æœˆä¸”å½“å‰æœˆç­‰äºŽé—°æœˆï¼Œä½†å½“å‰æœˆåˆä¸æ˜¯é—°æœˆï¼Œåˆ™è¦å¤šæ·»åŠ&nbsp;ä¸€ä¸ªæœˆ
+			count = 12;
+			if(lunar1.leapMonth &gt; lunar1.month ||
+				(lunar1.leapMonth == lunar1.month &amp;&amp; !lunar1.isLeaMonth)) count += 1;
+			count  -= lunar1.month;
+
+			//è®¡ç®—ä¸¤å¹´ä¹‹é—´ä¸­é—´çš„å¹´æœˆä»½
+			var year = lunar1.year + 1;
+			for (var i = year; i &lt; lunar2.year; i++) {
+				count += _chineseLunar.monthsOfYear(year++);
+			}
+			//è®¡ç®—æœ€åŽä¸€å¹´
+			count += lunar2.month;
+			if (lunar2.isLeapMonth || lunar2.month &lt; lunar2.leapMonth) count++;
+		};
+		return count;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthName" id="apidoc.element.chinese-lunar.monthName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthName
+        <span class="apidocSignatureSpan">(month, traditional, leap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthName = function (month, traditional, leap) {
+		var monthName = "æ­£,äºŒ,ä¸‰,å››,äº”,å…­,ä¸ƒ,å…«,ä¹,å,åä¸€,åäºŒ".split(",");
+		if (traditional) { monthName[11] = "è…Š" }
+		return (leap ? "é—°" : "") + monthName[month - 1] + "æœˆ";
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthsOfYear" id="apidoc.element.chinese-lunar.monthsOfYear">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthsOfYear
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthsOfYear = function (year) {
+		return MAPPING[year - MINYEAR].length - 1;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.solarToLunar" id="apidoc.element.chinese-lunar.solarToLunar">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>solarToLunar
+        <span class="apidocSignatureSpan">(solar, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">solarToLunar = function (solar, format) {
+		var offset = solar.getFullYear() - MINYEAR;
+		//è¶…å‡ºèŒƒå›´
+		if(offset &lt;= 0 || offset &gt;= MAPPING.length){
+			throw new Error('Specified date range is invalid.');
+		};
+
+		//æŸ¥æ‰¾èŒƒå›´å†…çš„å†œåŽ†æ•°æ®
+		var data = _findLunar(solar, offset, 0, 13, false);
+		//å¦‚æžœæ²¡æœ‰æ‰¾åˆ°ï¼Œåˆ™æ‰¾å‰ä¸€å¹´çš„ï¼Œå›&nbsp;ä¸ºå†œåŽ†åœ¨å…¬åŽ†ä¹‹å‰ï¼Œå¹¶ä¸”ä¸ä¼šè¶…è¿‡ä¸€å¹´ï¼ŒæŸ¥ä¸€å¹´å°±å¯ä»¥äº†
+		data = data || _findLunar(solar, offset - 1, 12, 99, true);
+
+		//è¿˜æ˜¯æ²¡æœ‰æ‰¾åˆ°ï¼Œè¡¨ç¤ºè¶…å‡ºèŒƒå›´
+		if (!data) return false;
+
+		//å†œåŽ†åˆä¸€å¯¹åº”å…¬åŽ†çš„å“ªä¸€å¤©
+		var firstDay = new Date(data.year, data.month - 1, data.day);
+		var day = _solarDiff(solar, firstDay, "d") + 1;
+
+		//è¿”å›žçš„å†œåŽ†ç»“æžœ
+		var result = {
+			leap: data.leapMonth &gt; 0 &amp;&amp; data.leapMonth + 1 == data.lunarMonth,
+			year: data.lunarYear,
+			month: data.leapMonth &gt; 0 &amp;&amp; data.lunarMonth &gt; data.leapMonth ? data.lunarMonth - 1 : data.lunarMonth,
+			day: day,
+			leapMonth: data.leapMonth
+		};
+
+		//åˆ¤æ–­æ˜¯å¦è¦æ&nbsp;¼å¼åŒ–ç»“æžœ
+		return (format &amp;&amp; result) ? _chineseLunar.format(result, format) : result;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Node.js
+
+var chineseLunar = require("chinese-lunar");
+
+### æµè§ˆå™¨
+
+`window.chineseLunar`æ˜¯ä¸€ä¸ªå…¨å±€å‡½æ•°ï¼Œç›´æŽ¥è°ƒç”¨å°±å¯ä»¥ï¼Œä¾‹å¦‚`chineseLunar.<span class="apidocCodeKeywordSpan">solarToLunar</span>(new Date());`
+
+å¯¹äºŽ`require`ï¼Œå¯ä»¥ç”¨å¦‚ä¸‹æ–¹å¼ä½¿ç”¨ï¼š
+
+require(["chinese-lunar"], function(chineseLunar){
+  console.log(chineseLunar.solarToLunar(new Date());
+  //more...
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.traditionalYearName" id="apidoc.element.chinese-lunar.traditionalYearName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>traditionalYearName
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traditionalYearName = function (year) {
+		var Gan = "ç”²ä¹™ä¸™ä¸æˆŠå·±åºšè¾›å£¬ç™¸".split("");
+		var Zhi = "å­ä¸‘å¯…å¯è¾°å·³åˆæœªç”³é…‰æˆŒäº¥".split("");
+		year = year - MINYEAR + 36;
+		return (Gan[year % 10] + Zhi[year % 12] + "å¹´");
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.yearName" id="apidoc.element.chinese-lunar.yearName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>yearName
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yearName = function (year) {
+		var cnStr = 'ã€‡,ä¸€,äºŒ,ä¸‰,å››,äº”,å…­,ä¸ƒ,å…«,ä¹'.split(",");
+		var cYear = year.toString();
+		var result = '';
+		for (var i = 0; i &lt; cYear.length; i++) {
+			result += cnStr[parseInt(cYear.charAt(i))];
+		}
+		return result + 'å¹´';
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

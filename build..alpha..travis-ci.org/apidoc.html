@@ -1,0 +1,679 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/conis/chinese-lunar#readme"
+
+    >chinese-lunar (v0.1.1)</a>
+</h1>
+<h4>农历与公历相互转换的类库，支持农历的之间的加减运算，并提供生肖、干支等，支持1900-2100年</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.chinese-lunar">module chinese-lunar</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.animalName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>animalName
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.dateAdd">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>dateAdd
+            <span class="apidocSignatureSpan">(lunar, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.dateDiff">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>dateDiff
+            <span class="apidocSignatureSpan">(lunar1, lunar2, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.dayName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>dayName
+            <span class="apidocSignatureSpan">(lunar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.daysOfMonth">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>daysOfMonth
+            <span class="apidocSignatureSpan">(year, month, leap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.format">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>format
+            <span class="apidocSignatureSpan">(lunar, expr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.leapMonthOfYear">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>leapMonthOfYear
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.lunarToSolar">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>lunarToSolar
+            <span class="apidocSignatureSpan">(year, month, day, leap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthAdd">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthAdd
+            <span class="apidocSignatureSpan">(lunar, inc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthDiff">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthDiff
+            <span class="apidocSignatureSpan">(lunar1, lunar2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthName
+            <span class="apidocSignatureSpan">(month, traditional, leap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.monthsOfYear">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>monthsOfYear
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.solarToLunar">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>solarToLunar
+            <span class="apidocSignatureSpan">(solar, format)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.traditionalYearName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>traditionalYearName
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.chinese-lunar.yearName">
+            function <span class="apidocSignatureSpan">chinese-lunar.</span>yearName
+            <span class="apidocSignatureSpan">(year)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.chinese-lunar" id="apidoc.module.chinese-lunar">module chinese-lunar</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.animalName" id="apidoc.element.chinese-lunar.animalName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>animalName
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">animalName = function (year) {
+		return &#x22;鼠牛虎兔龙蛇马羊猴鸡狗猪&#x22;.split(&#x22;&#x22;)[(year - 4) % 12];
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.dateAdd" id="apidoc.element.chinese-lunar.dateAdd">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>dateAdd
+        <span class="apidocSignatureSpan">(lunar, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dateAdd = function (lunar, expr) {
+		//分析表达式
+		var list = _expression(expr);
+
+		for(var i = 0; i &#x3c; list.length; i ++){
+			lunar = _dateAdd(lunar, list[i]);
+		};
+		return lunar;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.dateDiff" id="apidoc.element.chinese-lunar.dateDiff">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>dateDiff
+        <span class="apidocSignatureSpan">(lunar1, lunar2, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dateDiff = function (lunar1, lunar2, expr) {
+		//计算农历月份差值
+		if(expr == &#x22;M&#x22;){
+			return _chineseLunar.monthDiff(lunar1, lunar2);
+		};
+
+		//先转成公历，除了月份，其它的都可以按公历计算
+		var solar1 = _chineseLunar.lunarToSolar(lunar1);
+		var solar2 = _chineseLunar.lunarToSolar(lunar2);
+		//再把农历转到公历
+		return _solarDiff(solar2, solar1, expr);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.dayName" id="apidoc.element.chinese-lunar.dayName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>dayName
+        <span class="apidocSignatureSpan">(lunar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dayName = function (lunar) {
+		switch (lunar) {
+			case 10: return &#x27;初十&#x27;;
+			case 20: return &#x27;二十&#x27;;
+			case 30: return &#x27;三十&#x27;;
+			default: return (&#x22;初十廿卅&#x22;.split(&#x22;&#x22;)[Math.floor(lunar / 10)] +
+				&#x22;一二三四五六七八九十&#x22;.split(&#x22;&#x22;)[(lunar - 1) % 10]) || lunar;
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.daysOfMonth" id="apidoc.element.chinese-lunar.daysOfMonth">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>daysOfMonth
+        <span class="apidocSignatureSpan">(year, month, leap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">daysOfMonth = function (year, month, leap) {
+		if (typeof (year) == &#x22;object&#x22;) {
+			month = year.month;
+			leap = year.leap;
+			year = year.year;
+		};
+
+		var date1 = _chineseLunar.lunarToSolar(year, month, 1, leap);
+		var leapMonth = _chineseLunar.leapMonthOfYear(year);
+		if (leapMonth == month &#x26;&#x26; !leap) {
+			//如果是闰月和当前一月一至，且当前月不是闰月，说明下一个月是闰月，例如2009年5月，这一年闰5月，如果传过来的不是闰月，那么下一个月就是闰月
+			leap = true;
+		} else if (month == 12) {
+			//农历的最后一个月
+			year++;
+			month = 1;
+		} else {
+			leap = false;
+			month++;
+		};
+
+		var date2 = _chineseLunar.lunarToSolar(year, month, 1, leap);
+		return _dateDiff(date2, date1, &#x22;d&#x22;);
+
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.format" id="apidoc.element.chinese-lunar.format">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>format
+        <span class="apidocSignatureSpan">(lunar, expr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (lunar, expr) {
+		return expr.replace(/[TAYyMmdD]/g, function(m, i) {
+			switch (m) {
+				//获取传统的年
+				case &#x22;T&#x22;: return _chineseLunar.traditionalYearName(lunar.year);
+				//获取生肖
+				case &#x22;A&#x22;: return _chineseLunar.animalName(lunar.year);
+				//获取中文的年
+				case &#x22;Y&#x22;: return _chineseLunar.yearName(lunar.year);
+				//获取数字年
+				case &#x22;y&#x22;: return lunar.year;
+				//获取月份
+				case &#x22;m&#x22;: return _chineseLunar.monthName(lunar.month, false, lunar.leap);
+				//获取传统的月
+				case &#x22;M&#x22;: return _chineseLunar.monthName(lunar.month, true, lunar.leap);
+				//获取天
+				case &#x22;d&#x22;: return _chineseLunar.dayName(lunar.day);
+				//如果是初一，则显示月，而不是显示
+				case &#x22;D&#x22;:
+					if(lunar.day == 1){
+						return _chineseLunar.monthName(lunar.month, false, lunar.leap);
+					}else{
+						return _chineseLunar.dayName(lunar.day);
+					};
+			}
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### solarToLunar
+
+`solarToLunar(solar[,format]); //=&#x3e; lunar or string`
+将公历转换为农历，如果设置了format，则返回字符形式，反之返回农历对象。
+示例代码如下：
+
+    var lunar = chineseLunar.solarToLunar(new Date(1982, 0, 29));
+    console.log(lunar.<span class="apidocCodeKeywordSpan">format</span>(&#x27;YMD&#x27;));     //一九八二年腊月十六
+
+### lunarToSolar
+
+`lunarToSolar(lunar); // =&#x3e; solar`
+`lunarToSolar(year, month, day[,leap]); //=&#x3e; solar`
+将农历转换为公历，leap为可选参数
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.leapMonthOfYear" id="apidoc.element.chinese-lunar.leapMonthOfYear">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>leapMonthOfYear
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">leapMonthOfYear = function (year) {
+		var info = MAPPING[year - MINYEAR];
+		return info ? info[0] : 0;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.lunarToSolar" id="apidoc.element.chinese-lunar.lunarToSolar">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>lunarToSolar
+        <span class="apidocSignatureSpan">(year, month, day, leap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lunarToSolar = function (year, month, day, leap) {
+		var arg0 = arguments[0];
+
+		//第一个参数是对象
+		if (typeof (arg0) == &#x22;object&#x22; &#x26;&#x26; arguments.length == 1) {
+			year = arg0.year;
+			month = arg0.month;
+			day = arg0.day;
+			leap = arg0.leap;
+		};
+
+		//根据偏移量取得映射数据
+		var offset = year - MINYEAR;
+		//所查询的日期超出范围
+		if (offset &#x3c; 0 || offset &#x3e; MAPPING.length){
+			throw new Error(&#x27;Specified date range is invalid.&#x27;);
+		};
+
+		//取得润月是哪一个月
+		var leapMonth = MAPPING[offset][0];
+		//如果isLeap=true，并且当前月份就是闰月，或者本月有闰月，且当前月份大于闰月，则月份需要加1
+		if ((leap &#x26;&#x26; month == leapMonth) ||
+			(leapMonth &#x3e; 0 &#x26;&#x26; month &#x3e; leapMonth)){
+			month += 1;
+		};
+
+		//取出对应到某个月的片断
+		var segment = MAPPING[offset][month]; 		//农历第一天对应公历的具体天
+		var mapMonth = Number(segment.substring(0, 2))
+		var mapDate = Number(segment.substring(2, 4));
+
+		if (mapMonth &#x3e; 12) {
+			year += 1;
+			mapMonth -= 12;
+		};
+
+		var solar = new Date(year, mapMonth - 1, mapDate);
+		var time = solar.getTime() + ((day - 1) * 24 * 60 * 60 * 1000);
+		return new Date(time);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthAdd" id="apidoc.element.chinese-lunar.monthAdd">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthAdd
+        <span class="apidocSignatureSpan">(lunar, inc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthAdd = function (lunar, inc) {
+		//如果是Date，则转换为农历
+		if (lunar instanceof Date) lunar = _chineseLunar.solarToLunar(lunar);
+		if (inc == 0) return lunar;
+
+		var year = lunar.year, count;
+		var month = lunar.month;
+		if(lunar.leap ||
+			(lunar.leapMonth &#x3e; 0 &#x26;&#x26; lunar.month &#x3e; lunar.leapMonth)) month++;
+
+		var run = true;
+		do {
+			//计算当前年有多少个月
+			count = _chineseLunar.monthsOfYear(year);
+			inc = inc + month - count;
+			if (inc &#x3c;= 0) {
+				run = false;
+				month = year == lunar.year ? count + inc : count + inc - month;
+			}else {
+				year++;
+				month = 1;
+			}
+		} while (run);
+
+		//获取最后的结果年的闰月是哪一个月
+		var leapMonth = _chineseLunar.leapMonthOfYear(year);
+		var leap = false;
+		//如果闰月大于农历月，则月份减1
+		if (leapMonth &#x3e; 0 &#x26;&#x26; month &#x3e; leapMonth) {
+			month--;
+			//如果减完后月份和闰月相等，表示是闰月
+			leap = month == leapMonth;
+		}
+
+		return {
+			year: year,
+			month: month,
+			leap: leap,
+			leapMonth: leapMonth
+		};
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthDiff" id="apidoc.element.chinese-lunar.monthDiff">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthDiff
+        <span class="apidocSignatureSpan">(lunar1, lunar2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthDiff = function (lunar1, lunar2) {
+		//如果是公历的日期格式，则转换为农历
+		var count = 0;
+
+		//如果数据类型是日期，则转换为农历
+		if (lunar1 instanceof Date) lunar1 = _chineseLunar.solarToLunar(lunar1);
+		if (lunar2 instanceof Date) lunar2 = _chineseLunar.solarToLunar(lunar2);
+
+		//两个日期是同一年
+		if (lunar1.year == lunar2.year) {
+			count = lunar2.month - lunar1.month;
+			//中间有闰月的存在，计数器加一
+			if (lunar1.leapMonth &#x3e;= lunar1.month &#x26;&#x26; lunar1.leapMonth &#x3c;= lunar2.month) count++;
+		} else {
+			//计算首年，如果当前的闰月大于当前月，或者当前年有闰月且当前月等于闰月，但当前月又不是闰月，则要多添加一个月
+			count = 12;
+			if(lunar1.leapMonth &#x3e; lunar1.month ||
+				(lunar1.leapMonth == lunar1.month &#x26;&#x26; !lunar1.isLeaMonth)) count += 1;
+			count  -= lunar1.month;
+
+			//计算两年之间中间的年月份
+			var year = lunar1.year + 1;
+			for (var i = year; i &#x3c; lunar2.year; i++) {
+				count += _chineseLunar.monthsOfYear(year++);
+			}
+			//计算最后一年
+			count += lunar2.month;
+			if (lunar2.isLeapMonth || lunar2.month &#x3c; lunar2.leapMonth) count++;
+		};
+		return count;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthName" id="apidoc.element.chinese-lunar.monthName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthName
+        <span class="apidocSignatureSpan">(month, traditional, leap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthName = function (month, traditional, leap) {
+		var monthName = &#x22;正,二,三,四,五,六,七,八,九,十,十一,十二&#x22;.split(&#x22;,&#x22;);
+		if (traditional) { monthName[11] = &#x22;腊&#x22; }
+		return (leap ? &#x22;闰&#x22; : &#x22;&#x22;) + monthName[month - 1] + &#x22;月&#x22;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.monthsOfYear" id="apidoc.element.chinese-lunar.monthsOfYear">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>monthsOfYear
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthsOfYear = function (year) {
+		return MAPPING[year - MINYEAR].length - 1;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.solarToLunar" id="apidoc.element.chinese-lunar.solarToLunar">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>solarToLunar
+        <span class="apidocSignatureSpan">(solar, format)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">solarToLunar = function (solar, format) {
+		var offset = solar.getFullYear() - MINYEAR;
+		//超出范围
+		if(offset &#x3c;= 0 || offset &#x3e;= MAPPING.length){
+			throw new Error(&#x27;Specified date range is invalid.&#x27;);
+		};
+
+		//查找范围内的农历数据
+		var data = _findLunar(solar, offset, 0, 13, false);
+		//如果没有找到，则找前一年的，因为农历在公历之前，并且不会超过一年，查一年就可以了
+		data = data || _findLunar(solar, offset - 1, 12, 99, true);
+
+		//还是没有找到，表示超出范围
+		if (!data) return false;
+
+		//农历初一对应公历的哪一天
+		var firstDay = new Date(data.year, data.month - 1, data.day);
+		var day = _solarDiff(solar, firstDay, &#x22;d&#x22;) + 1;
+
+		//返回的农历结果
+		var result = {
+			leap: data.leapMonth &#x3e; 0 &#x26;&#x26; data.leapMonth + 1 == data.lunarMonth,
+			year: data.lunarYear,
+			month: data.leapMonth &#x3e; 0 &#x26;&#x26; data.lunarMonth &#x3e; data.leapMonth ? data.lunarMonth - 1 : data.lunarMonth,
+			day: day,
+			leapMonth: data.leapMonth
+		};
+
+		//判断是否要格式化结果
+		return (format &#x26;&#x26; result) ? _chineseLunar.format(result, format) : result;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Node.js
+
+var chineseLunar = require(&#x22;chinese-lunar&#x22;);
+
+### 浏览器
+
+`window.chineseLunar`是一个全局函数，直接调用就可以，例如`chineseLunar.<span class="apidocCodeKeywordSpan">solarToLunar</span>(new Date());`
+
+对于`require`，可以用如下方式使用：
+
+require([&#x22;chinese-lunar&#x22;], function(chineseLunar){
+  console.log(chineseLunar.solarToLunar(new Date());
+  //more...
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.traditionalYearName" id="apidoc.element.chinese-lunar.traditionalYearName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>traditionalYearName
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">traditionalYearName = function (year) {
+		var Gan = &#x22;甲乙丙丁戊己庚辛壬癸&#x22;.split(&#x22;&#x22;);
+		var Zhi = &#x22;子丑寅卯辰巳午未申酉戌亥&#x22;.split(&#x22;&#x22;);
+		year = year - MINYEAR + 36;
+		return (Gan[year % 10] + Zhi[year % 12] + &#x22;年&#x22;);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.chinese-lunar.yearName" id="apidoc.element.chinese-lunar.yearName">
+        function <span class="apidocSignatureSpan">chinese-lunar.</span>yearName
+        <span class="apidocSignatureSpan">(year)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">yearName = function (year) {
+		var cnStr = &#x27;〇,一,二,三,四,五,六,七,八,九&#x27;.split(&#x22;,&#x22;);
+		var cYear = year.toString();
+		var result = &#x27;&#x27;;
+		for (var i = 0; i &#x3c; cYear.length; i++) {
+			result += cnStr[parseInt(cYear.charAt(i))];
+		}
+		return result + &#x27;年&#x27;;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
